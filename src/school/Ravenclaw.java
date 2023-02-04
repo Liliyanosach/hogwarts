@@ -28,4 +28,53 @@ public class Ravenclaw extends Hogwarts {
                 ", остроумен " + witty +
                 ", полон творчества " + fullOfCreativity + super.toString();
     }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public int getSmart() {
+        return smart;
+    }
+
+    public void setSmart(int smart) {
+        this.smart = smart;
+    }
+
+    public int getWise() {
+        return wise;
+    }
+
+    public void setWise(int wise) {
+        this.wise = wise;
+    }
+
+    public int getWitty() {
+        return witty;
+    }
+
+    public void setWitty(int witty) {
+        this.witty = witty;
+    }
+
+    public int getFullOfCreativity() {
+        return fullOfCreativity;
+    }
+
+    public void setFullOfCreativity(int fullOfCreativity) {
+        this.fullOfCreativity = fullOfCreativity;
+    }
+
+    public void compareStudents(Ravenclaw ravenclaw, Ravenclaw ravenclaw1){
+        int st1 = ravenclaw.smart + ravenclaw.wise + ravenclaw.witty + ravenclaw.fullOfCreativity;
+        int st2 = ravenclaw1.smart + ravenclaw1.wise + ravenclaw1.witty + ravenclaw1.fullOfCreativity;
+        if(st1>st2){
+            System.out.println(ravenclaw.getFullName() + " лучший Когтевранец, чем " + ravenclaw1.getFullName());
+        } else {
+            System.out.println(ravenclaw1.getFullName() + " лучший Когтевранец, чем " + ravenclaw.getFullName());}
+    }
 }

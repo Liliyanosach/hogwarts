@@ -20,7 +20,7 @@ public class HogwartsTest {
 
         Hufflepuff zachariasSmith = new Hufflepuff("Захария Смит",45,67,34,67,45);
         Hufflepuff cedricDiggory = new Hufflepuff("Седрик Диггори",76,58,89,56,38);
-        Hufflepuff JustinFinchFletchley = new Hufflepuff("Джастин Финч-Флетчли",56,72,91,67,49);
+        Hufflepuff justinFinchFletchley = new Hufflepuff("Джастин Финч-Флетчли",56,72,91,67,49);
 
         Ravenclaw zhouChang = new Ravenclaw("Чжоу Чанг",67,81,38,56,38,16);
         Ravenclaw padmaPatil = new Ravenclaw("Падма Патил",57,84,68,39,40,50);
@@ -30,6 +30,14 @@ public class HogwartsTest {
         System.out.println(dracoMalfoy);
         System.out.println(zhouChang);
         System.out.println(zachariasSmith);
+
+        ronWeasley.compareStudents(ronWeasley,harryPotter);
+        grahamMontagu.compareStudents(grahamMontagu,gregoryGoyle);
+        cedricDiggory.compareStudents(cedricDiggory,justinFinchFletchley);
+
+
+
+
 
 
     }

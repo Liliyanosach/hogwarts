@@ -19,6 +19,38 @@ public class Gryffindor extends Hogwarts {
         this.courage = courage;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public int getNobility() {
+        return nobility;
+    }
+
+    public void setNobility(int nobility) {
+        this.nobility = nobility;
+    }
+
+    public int getHonor() {
+        return honor;
+    }
+
+    public void setHonor(int honor) {
+        this.honor = honor;
+    }
+
+    public int getCourage() {
+        return courage;
+    }
+
+    public void setCourage(int courage) {
+        this.courage = courage;
+    }
+
     @Override
     public String toString() {
         return "Факультет Gryffindor: " + fullName +
@@ -29,15 +61,21 @@ public class Gryffindor extends Hogwarts {
     }
 
     /*
-    * Реализуйте 4 метода, по одному для каждого факультета, которые сравнивают между собой учеников одного факультета по свойствам.
-    * У каждого ученика нужно сложить баллы по каждому свойству, которое присуще ученику данного факультета.
-    * Тот ученик, у которого сумма свойств больше, считается лучшим учеником.
-    * Метод должен выводить в консоль сравнение учеников.
-    * Например, у Гермионы благородство = 5 баллов, честь = 5 баллов и храбрость = 6 баллов.
-    * У Рона Уизли благородство = 3 балла, честь = 6 баллов и храбрость = 5 баллов.
-    * У Гермионы сумма баллов равна 16-ти, а у Рона – 14-ти. Значит метод должен вывести в консоль “Гермиона лучший Гриффиндорец, чем Рон”.
+     * Реализуйте 4 метода, по одному для каждого факультета, которые сравнивают между собой учеников одного факультета по свойствам.
+     * У каждого ученика нужно сложить баллы по каждому свойству, которое присуще ученику данного факультета.
+     * Тот ученик, у которого сумма свойств больше, считается лучшим учеником.
+     * Метод должен выводить в консоль сравнение учеников.
+     * Например, у Гермионы благородство = 5 баллов, честь = 5 баллов и храбрость = 6 баллов.
+     * У Рона Уизли благородство = 3 балла, честь = 6 баллов и храбрость = 5 баллов.
+     * У Гермионы сумма баллов равна 16-ти, а у Рона – 14-ти. Значит метод должен вывести в консоль “Гермиона лучший Гриффиндорец, чем Рон”.
      */
-    public void compareStudents(){
-
+    public void compareStudents(Gryffindor gryffindor, Gryffindor gryffindor1) {
+        int st1 = gryffindor.nobility + gryffindor.honor + gryffindor.courage;
+        int st2 = gryffindor1.nobility + gryffindor1.honor + gryffindor1.courage;
+        if (st1 > st2) {
+            System.out.println(gryffindor.getFullName() + " лучший Гриффиндорец, чем " + gryffindor1.getFullName());
+        } else {
+            System.out.println(gryffindor1.getFullName() + " лучший Гриффиндорец, чем " + gryffindor.getFullName());
+        }
     }
 }
