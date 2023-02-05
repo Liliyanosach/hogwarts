@@ -70,8 +70,8 @@ public class Ravenclaw extends Hogwarts {
     }
 
     public void compareStudents(Ravenclaw ravenclaw, Ravenclaw ravenclaw1){
-        int st1 = ravenclaw.smart + ravenclaw.wise + ravenclaw.witty + ravenclaw.fullOfCreativity;
-        int st2 = ravenclaw1.smart + ravenclaw1.wise + ravenclaw1.witty + ravenclaw1.fullOfCreativity;
+        int st1 = ravenclaw.getSmart() + ravenclaw.getWise() + ravenclaw.getWitty() + ravenclaw.getFullOfCreativity();
+        int st2 = ravenclaw1.getSmart() + ravenclaw1.getWise() + ravenclaw1.getWitty() + ravenclaw1.getFullOfCreativity();
         if(st1>st2){
             System.out.println(ravenclaw.getFullName() + " лучший Когтевранец, чем " + ravenclaw1.getFullName());
         } else {

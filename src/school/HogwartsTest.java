@@ -1,14 +1,12 @@
 package school;
 
-import java.sql.SQLOutput;
-
 public class HogwartsTest {
     public static void main(String[] args) {
         /*
-        * Гарри Поттер, Гермиона Грейнджер и Рон Уизли учатся на факультете Гриффиндор.
-        * Драко Малфой, Грэхэм Монтегю, Грегори Гойл учатся на Слизерине.
-        * На факультет Пуффендуй учатся Захария Смит, Седрик Диггори, Джастин Финч-Флетчли.
-        * На факультете Когтевран учится Чжоу Чанг, Падма Патил и Маркус Белби.
+         * Гарри Поттер, Гермиона Грейнджер и Рон Уизли учатся на факультете Гриффиндор.
+         * Драко Малфой, Грэхэм Монтегю, Грегори Гойл учатся на Слизерине.
+         * На факультет Пуффендуй учатся Захария Смит, Седрик Диггори, Джастин Финч-Флетчли.
+         * На факультете Когтевран учится Чжоу Чанг, Падма Патил и Маркус Белби.
          */
         Gryffindor harryPotter = new Gryffindor("Гарри Поттер",78,97,100, 57,76);
         Gryffindor hermioneGranger = new Gryffindor("Гермиона Грейнджер",67,99,65,45,78);
@@ -24,21 +22,34 @@ public class HogwartsTest {
 
         Ravenclaw zhouChang = new Ravenclaw("Чжоу Чанг",67,81,38,56,38,16);
         Ravenclaw padmaPatil = new Ravenclaw("Падма Патил",57,84,68,39,40,50);
-        Ravenclaw marcusBelby = new Ravenclaw("Маркус Белби",26,89,47,36,69,41);
+        Ravenclaw marcusBelby = new Ravenclaw("Маркус Белби", 26, 89, 47, 36, 69, 41);
 
         System.out.println(harryPotter);
         System.out.println(dracoMalfoy);
         System.out.println(zhouChang);
         System.out.println(zachariasSmith);
 
-        ronWeasley.compareStudents(ronWeasley,harryPotter);
-        grahamMontagu.compareStudents(grahamMontagu,gregoryGoyle);
-        cedricDiggory.compareStudents(cedricDiggory,justinFinchFletchley);
-
-
-
+        ronWeasley.compareStudents(ronWeasley, harryPotter);
+        grahamMontagu.compareStudents(grahamMontagu, gregoryGoyle);
+        cedricDiggory.compareStudents(cedricDiggory, justinFinchFletchley);
+        compareStudentByProperties(ronWeasley, dracoMalfoy);
 
 
 
     }
+    /*
+     * Реализуйте метод, который сравнивает двух любых учеников Хогвартса по силе магии и расстоянию трансгрессии,
+     * и выводит в консоль сравнительную оценку между двумя учениками.
+     */
+    public static void compareStudentByProperties(Hogwarts hogwarts, Hogwarts hogwarts1) {
+        int str = hogwarts.getConjure() + hogwarts.getTransgress();
+        int str1 = hogwarts1.getConjure() + hogwarts1.getTransgress();
+        if(str>str1){
+            System.out.println(str + " Этот студент лучше чем" + str1);
+        }else {
+            System.out.println( str1 + " Этот студент лучше чем " + str);
+        }
+
+    }
+
 }

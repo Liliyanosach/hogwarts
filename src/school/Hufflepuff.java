@@ -60,8 +60,8 @@ public class Hufflepuff extends Hogwarts {
     }
 
     public void compareStudents(Hufflepuff hufflepuff, Hufflepuff hufflepuff1){
-        int st1 = hufflepuff.hardworking + hufflepuff.loyal + hufflepuff.honest;
-        int st2 = hufflepuff1.hardworking + hufflepuff1.loyal + hufflepuff1.honest;
+        int st1 = hufflepuff.getHardworking() + hufflepuff.getLoyal() + hufflepuff.getHonest();
+        int st2 = hufflepuff1.getHardworking() + hufflepuff1.getLoyal() + hufflepuff1.getHonest();
         if(st1>st2){
             System.out.println(hufflepuff.getFullName() + " лучший Пуффендуец, чем " + hufflepuff1.getFullName());
         } else {
