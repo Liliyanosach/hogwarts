@@ -60,13 +60,19 @@ public class Gryffindor extends Hogwarts {
      * У Рона Уизли благородство = 3 балла, честь = 6 баллов и храбрость = 5 баллов.
      * У Гермионы сумма баллов равна 16-ти, а у Рона – 14-ти. Значит метод должен вывести в консоль “Гермиона лучший Гриффиндорец, чем Рон”.
      */
-    public void compareStudents(Gryffindor gryffindor, Gryffindor gryffindor1) {
-        int st1 = gryffindor.getNobility() + gryffindor.getHonor() + gryffindor.getCourage();
-        int st2 = gryffindor1.getNobility() + gryffindor1.getHonor() + gryffindor1.getCourage();
+
+    public int ability(){
+        return getNobility() + getHonor() + getCourage();
+    }
+    public void compareStudents(Gryffindor gryffindor1) {
+        int st1 = ability();
+        int st2 = gryffindor1.ability();
         if (st1 > st2) {
-            System.out.println(gryffindor.getFullName() + " лучший Гриффиндорец, чем " + gryffindor1.getFullName());
+            System.out.println(getFullName() + " лучший Гриффиндорец, чем " + gryffindor1.getFullName());
+        } else if (st1 < st2){
+            System.out.println(gryffindor1.getFullName() + " лучший Гриффиндорец, чем " + getFullName());
         } else {
-            System.out.println(gryffindor1.getFullName() + " лучший Гриффиндорец, чем " + gryffindor.getFullName());
+            System.out.println("Их способности равны");
         }
     }
 }

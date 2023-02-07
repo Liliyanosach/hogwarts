@@ -49,12 +49,15 @@ public class Hufflepuff extends Hogwarts {
         this.honest = honest;
     }
 
-    public void compareStudents(Hufflepuff hufflepuff, Hufflepuff hufflepuff1){
-        int st1 = hufflepuff.getHardworking() + hufflepuff.getLoyal() + hufflepuff.getHonest();
-        int st2 = hufflepuff1.getHardworking() + hufflepuff1.getLoyal() + hufflepuff1.getHonest();
+    public int ability(){
+        return getHardworking() + getLoyal() + getHonest();
+    }
+    public void compareStudents(Hufflepuff hufflepuff1){
+        int st1 = ability();
+        int st2 = hufflepuff1.ability();
         if(st1>st2){
-            System.out.println(hufflepuff.getFullName() + " лучший Пуффендуец, чем " + hufflepuff1.getFullName());
+            System.out.println(getFullName() + " лучший Пуффендуец, чем " + hufflepuff1.getFullName());
         } else {
-            System.out.println(hufflepuff1.getFullName() + " лучший Пуффендуец, чем " + hufflepuff.getFullName());}
+            System.out.println(hufflepuff1.getFullName() + " лучший Пуффендуец, чем " + getFullName());}
     }
 }

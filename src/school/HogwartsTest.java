@@ -29,9 +29,9 @@ public class HogwartsTest {
         System.out.println(zhouChang);
         System.out.println(zachariasSmith);
 
-        ronWeasley.compareStudents(ronWeasley, harryPotter);
-        grahamMontagu.compareStudents(grahamMontagu, gregoryGoyle);
-        cedricDiggory.compareStudents(cedricDiggory, justinFinchFletchley);
+        ronWeasley.compareStudents(harryPotter);
+        grahamMontagu.compareStudents(gregoryGoyle);
+        cedricDiggory.compareStudents(justinFinchFletchley);
         ronWeasley.compareStudentByProperties(ronWeasley, dracoMalfoy);
 
     }
