@@ -32,24 +32,9 @@ public class HogwartsTest {
         ronWeasley.compareStudents(ronWeasley, harryPotter);
         grahamMontagu.compareStudents(grahamMontagu, gregoryGoyle);
         cedricDiggory.compareStudents(cedricDiggory, justinFinchFletchley);
-        compareStudentByProperties(ronWeasley, dracoMalfoy);
-
-
+        ronWeasley.compareStudentByProperties(ronWeasley, dracoMalfoy);
 
     }
-    /*
-     * Реализуйте метод, который сравнивает двух любых учеников Хогвартса по силе магии и расстоянию трансгрессии,
-     * и выводит в консоль сравнительную оценку между двумя учениками.
-     */
-    public static void compareStudentByProperties(Hogwarts hogwarts, Hogwarts hogwarts1) {
-        int str = hogwarts.getConjure() + hogwarts.getTransgress();
-        int str1 = hogwarts1.getConjure() + hogwarts1.getTransgress();
-        if(str>str1){
-            System.out.println(str + " Этот студент лучше чем" + str1);
-        }else {
-            System.out.println( str1 + " Этот студент лучше чем " + str);
-        }
 
-    }
 
 }

@@ -5,7 +5,7 @@ public class Slytherin extends Hogwarts {
      * Студентам каждого из этих факультетов присущи свои свойства характера. Эти свойства оцениваются в целочисленном эквиваленте от 0 до 100.
      * Всем ученикам Слизерина присущи хитрость, решительность, амбициозность, находчивость и жажда власти.
      */
-    private String fullName;
+
     private int cunning;
     private int determination;
     private int ambition;
@@ -13,8 +13,7 @@ public class Slytherin extends Hogwarts {
     private int lustForPower;
 
     public Slytherin(String fullName, int conjure, int transgress, int cunning, int determination, int ambition, int resourcefulness, int lustForPower) {
-        super(conjure, transgress);
-        this.fullName = fullName;
+        super(fullName, conjure, transgress);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
@@ -22,24 +21,6 @@ public class Slytherin extends Hogwarts {
         this.lustForPower = lustForPower;
     }
 
-    @Override
-    public String toString() {
-        return "Факультет Slytherin: " + fullName +
-                " хитрость " + cunning +
-                ", решительность " + determination +
-                ", амбициозность " + ambition +
-                ", находчивость " + resourcefulness +
-                ", жажда власти" + lustForPower
-                + super.toString();
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
 
     public int getCunning() {
         return cunning;
@@ -79,6 +60,16 @@ public class Slytherin extends Hogwarts {
 
     public void setLustForPower(int lustForPower) {
         this.lustForPower = lustForPower;
+    }
+
+    @Override
+    public String toString() {
+        return "Факультет Slytherin: "  + super.toString() +
+                " хитрость " + cunning +
+                ", решительность " + determination +
+                ", амбициозность " + ambition +
+                ", находчивость " + resourcefulness +
+                ", жажда власти" + lustForPower;
     }
 
     public void compareStudents(Slytherin slytherin, Slytherin slytherin1){

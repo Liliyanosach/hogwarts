@@ -5,14 +5,13 @@ public class Hufflepuff extends Hogwarts {
      * Студентам каждого из этих факультетов присущи свои свойства характера. Эти свойства оцениваются в целочисленном эквиваленте от 0 до 100.
      * Студенты Пуффендуя трудолюбивы, верны, честны.
      */
-    private String fullName;
+
     private int hardworking;
     private int loyal;
     private int honest;
 
     public Hufflepuff(String fullName, int conjure, int transgress, int hardworking, int loyal, int honest) {
-        super(conjure, transgress);
-        this.fullName = fullName;
+        super(fullName, conjure, transgress);
         this.hardworking = hardworking;
         this.loyal = loyal;
         this.honest = honest;
@@ -20,19 +19,10 @@ public class Hufflepuff extends Hogwarts {
 
     @Override
     public String toString() {
-        return "Факультет Hufflepuff: " + fullName +
+        return "Факультет Hufflepuff: " + super.toString() +
                 " трудолюбив " + hardworking +
                 ", верен " + loyal +
-                ", честен " + honest +
-                super.toString();
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+                ", честен " + honest;
     }
 
     public int getHardworking() {

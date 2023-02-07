@@ -5,27 +5,19 @@ public class Gryffindor extends Hogwarts {
      * Студентам каждого из этих факультетов присущи свои свойства характера. Эти свойства оцениваются в целочисленном эквиваленте от 0 до 100.
      * Всем Гриффиндорцам присущи благородство, честь и храбрость.
      */
-    private String fullName;
+
     private int nobility;
     private int honor;
     private int courage;
 
 
     public Gryffindor(String fullName, int conjure, int transgress, int nobility, int honor, int courage) {
-        super(conjure, transgress);
-        this.fullName = fullName;
+        super(fullName, conjure, transgress);
         this.nobility = nobility;
         this.honor = honor;
         this.courage = courage;
     }
 
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
 
     public int getNobility() {
         return nobility;
@@ -53,11 +45,10 @@ public class Gryffindor extends Hogwarts {
 
     @Override
     public String toString() {
-        return "Факультет Gryffindor: " + fullName +
+        return "Факультет Gryffindor: " + super.toString() +
                 " присущи благородство - " + nobility +
                 ", честь " + honor +
-                ", храбрость " + courage +
-                super.toString();
+                ", храбрость " + courage;
     }
 
     /*
